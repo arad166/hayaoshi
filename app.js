@@ -57,6 +57,12 @@ new Vue({
         }, 500);
       } else if (key === 's') {
           playQuestion();
+      } else if (key == 'r'){
+        this.number = '';
+        this.number2 = '';
+        this.oyasumi = '';
+        this.showNumber = false;
+        this.showNumber2 = false;
       }
     }
   },
