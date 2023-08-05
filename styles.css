@@ -25,7 +25,19 @@ body {
   text-align: center;
   width: 40vh;
   height: 40vh;
-  border: 30px solid black;
+  border: 20px solid black;
+  border-radius: 30%;
+  transition: background-color 2s;
+}
+
+.oyasumi-respondent {
+  position:absolute;
+  top:55vh;
+  left: 60vw;
+  text-align: center;
+  width: 32vh;
+  height: 32vh;
+  border: 20px solid gray;
   border-radius: 30%;
   transition: background-color 2s;
 }
@@ -40,12 +52,23 @@ body {
   line-height: 30vh;
 }
 
+.oyasumi-display {
+  font-size: 25vh;
+  color: gray;
+  line-height: 22vh;
+}
+
 .order-text {
   font-size: 10vh;
 }
 
 .order-text2 {
   font-size: 7vh;
+}
+
+.oyasumi-text {
+  font-size: 7vh;
+  color: gray;
 }
 
 .red {
