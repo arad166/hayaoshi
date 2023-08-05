@@ -2,31 +2,55 @@ new Vue({
   el: '#app',
   data: {
     number: '',
-    showNumber: false
+    number2: '',
+    showNumber: false,
+    showNumber2: false
   },
   methods: {
     displayNumber(event) {
       const key = event.key;
       const keyCode = event.keyCode || event.which;
+      const firstRespondent = document.getElementsByClassName("first-respondent")[0];
+      const secondRespondent = document.getElementsByClassName("second-respondent")[0];
       if (keyCode >= 48 && keyCode <= 57 && !this.showNumber) {
         this.number = key;
         this.showNumber = true;
         playBuzzer();
+      } else if (keyCode >= 48 && keyCode <= 57 && this.showNumber && !this.showNumber2 && key != this.number){
+        this.number2 = key;
+        this.showNumber2 = true;
       } else if (key === 'o') {
         document.body.classList.add('red');
+        firstRespondent.classList.add('white');
+        secondRespondent.classList.add('white');
         playCorrect();
         setTimeout(() => {
           document.body.classList.remove('red');
+          firstRespondent.classList.remove('white');
+          secondRespondent.classList.remove('white');
           this.showNumber = false;
+          this.showNumber2 = false;
           this.number = '';
+          this.number2 = '';
         }, 1000);
       } else if (key === 'x') {
         document.body.classList.add('blue');
+        firstRespondent.classList.add('white');
+        secondRespondent.classList.add('white');
         playWrong();
         setTimeout(() => {
           document.body.classList.remove('blue');
-          this.showNumber = false;
-          this.number = '';
+          firstRespondent.classList.remove('white');
+          secondRespondent.classList.remove('white');
+          if(this.showNumber2){
+            playBuzzer();
+            this.number = this.number2;
+            this.number2 = '';
+            this.showNumber2 = false;
+          } else {
+            this.number = '';
+            this.showNumber = false;
+          }
         }, 500);
       } else if (key === 's') {
           playQuestion();

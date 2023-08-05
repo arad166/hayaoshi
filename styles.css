@@ -1,23 +1,51 @@
 body {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   font-size: 40px;
   height: 100vh;
   margin: 0;
+  font-family: sans-serif;
 }
 
-.number-display {
-  font-size: 80vh;
-  font-family:sans-serif;
+.first-respondent {
+  position:absolute;
+  top:5vh;
+  left: 15vw;
   text-align: center;
   width: 80vh;
   height: 80vh;
-  line-height: 90vh;
-  border: 30px solid #000;
+  border: 30px solid black;
   border-radius: 20%;
   transition: background-color 2s;
+}
+
+.second-respondent {
+  position:absolute;
+  top:5vh;
+  left: 60vw;
+  text-align: center;
+  width: 40vh;
+  height: 40vh;
+  border: 30px solid black;
+  border-radius: 30%;
+  transition: background-color 2s;
+}
+
+.number-display {
+  font-size: 70vh;
+  line-height: 70vh;
+}
+
+.number-display2 {
+  font-size: 30vh;
+  line-height: 30vh;
+}
+
+.order-text {
+  font-size: 10vh;
+}
+
+.order-text2 {
+  font-size: 7vh;
 }
 
 .red {
@@ -26,4 +54,9 @@ body {
 
 .blue {
   background-color: blue;
+}
+
+.white {
+  color: white;
+  border-color: white;
 }
