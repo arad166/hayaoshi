@@ -37,9 +37,10 @@ body {
   text-align: center;
   width: 32vh;
   height: 32vh;
-  border: 20px solid gray;
+  border: 20px dotted gray;
   border-radius: 30%;
   transition: background-color 2s;
+  color:gray;
 }
 
 .number-display {
@@ -54,7 +55,6 @@ body {
 
 .oyasumi-display {
   font-size: 25vh;
-  color: gray;
   line-height: 22vh;
 }
 
@@ -68,7 +68,6 @@ body {
 
 .oyasumi-text {
   font-size: 7vh;
-  color: gray;
 }
 
 .red {
